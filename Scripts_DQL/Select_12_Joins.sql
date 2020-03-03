@@ -43,3 +43,20 @@ SELECT e.employee_id,
 FROM   hr.employees e 
        JOIN hr.departments d using(department_id)
 WHERE e.employee_id = 100;
+
+-- ON COM JOIN ANINHADOS
+
+SELECT E.employee_id, 
+       E.first_name, 
+       E.job_id, 
+       D.department_name, 
+       L.state_province 
+FROM   hr.employees E 
+       INNER JOIN hr.departments D 
+                  INNER JOIN hr.locations L 
+                          ON ( D.location_id = L.location_id ) 
+               ON ( d.department_id = E.department_id ); 
+
+SELECT * FROM HR.departments;
+
+SELECT * FROM HR.LOCATIONS;

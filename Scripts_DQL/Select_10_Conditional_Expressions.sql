@@ -82,3 +82,13 @@ SELECT first_name,
 FROM   hr.employees; 
 
 
+
+
+
+
+
+
+
+
+
+
